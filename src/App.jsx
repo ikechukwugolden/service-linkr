@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import Services from "./pages/Service.jsx";
-import Pricing from "./pages/Pricing"; // Add this import
+import Home from "./Pages/Home.jsx";
+import Services from "./Pages/Service.jsx";
+import Pricing from "./Pages/Pricing.jsx"; // Add this import
 import RequestService from "./pages/RequestService";
 import ProviderLogin from "./pages/ProviderLogin";
 import ProviderDashboard from "./pages/ProviderDashboard";
