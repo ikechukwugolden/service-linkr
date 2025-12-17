@@ -82,7 +82,7 @@ export default function RequestService() {
       {submitted && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm">
           <div className="bg-gray-800 border border-gray-700 rounded-2xl p-8 max-w-md mx-4 text-center shadow-2xl animate-fadeIn">
-            <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            <div className="w-16 h-16 bg-linear-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
               <span className="text-3xl text-white">✓</span>
             </div>
             <h3 className="text-2xl font-bold text-blue-400 mb-2">Request Submitted!</h3>

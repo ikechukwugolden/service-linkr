@@ -11,10 +11,10 @@ export default function Navbar() {
           {/* Logo */}
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 bg-linear-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg">S</span>
               </div>
-              <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+              <span className="text-xl font-bold bg-linear-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                 Servicelinkr
               </span>
             </Link>
@@ -45,7 +45,7 @@ export default function Navbar() {
               </Link>
               <Link 
                 to="/request" 
-                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
+                className="bg-linear-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
               >
                 Request Service
               </Link>
@@ -87,7 +87,7 @@ export default function Navbar() {
                 Professionals
               </Link>
               <Link 
-                to="/how-it-works" 
+                to="/How-it-works" 
                 className="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md font-medium"
                 onClick={() => setMobileMenuOpen(false)}
               >
@@ -109,7 +109,7 @@ export default function Navbar() {
               </Link>
               <Link 
                 to="/request" 
-                className="block px-3 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-md font-medium text-center"
+                className="block px-3 py-2 bg-linear-to-r from-blue-600 to-purple-600 text-white rounded-md font-medium text-center"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Request Service

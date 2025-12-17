@@ -6,8 +6,10 @@ import RequestService from "./pages/RequestService";
 import ProviderLogin from "./pages/ProviderLogin";
 import ProviderDashboard from "./pages/ProviderDashboard";
 import Navbar from "./components/Navbar";
-import HowITworks from "./Pages/HowITworks.jsx";
+import HowITWorks from "./Pages/HowITworks.jsx";
 import Professionals from "./Pages/Professionals.jsx";
+import Login from "./Pages/login.jsx";
+
 
 function App() {
   return (
@@ -17,8 +19,9 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<Services />} />
         <Route path="/Professionals" element={<Professionals />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/HowITworks" element={<HowITWorks />} />
-        <Route path="/pricing" element={<Pricing />} /> {/* Add this route */}
+        <Route path="/pricing" element={<Pricing />} /> 
         <Route path="/request" element={<RequestService />} />
         <Route path="/provider/login" element={<ProviderLogin />} />
         <Route path="/provider/dashboard" element={<ProviderDashboard />} />
@@ -26,6 +29,6 @@ function App() {
     </Router>
   );
 }
-import HowITWorks from "./Pages/HowITworks.jsx";
+
 
 export default App;

@@ -120,7 +120,7 @@ export default function HowITWorks() {
   return (
     <div className="relative min-h-screen" style={{ backgroundColor: '#212b3a' }}>
       <div className="relative px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16 max-w-7xl mx-auto">
-        
+
         {/* Back Button */}
         <div className="mb-6 sm:mb-8">
           <Link to="/" className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium">
@@ -131,7 +131,7 @@ export default function HowITWorks() {
 
         {/* Header Section */}
         <div className="text-center mb-12 sm:mb-16 lg:mb-20">
-          <span className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white text-xs sm:text-sm font-semibold px-3 sm:px-4 py-1.5 sm:py-2 rounded-full mb-3 sm:mb-4 shadow">
+          <span className="inline-block bg-linear-to-r from-blue-600 to-purple-600 text-white text-xs sm:text-sm font-semibold px-3 sm:px-4 py-1.5 sm:py-2 rounded-full mb-3 sm:mb-4 shadow">
             Simple & Transparent Process
           </span>
           <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-white mb-3 sm:mb-4">
@@ -150,11 +150,10 @@ export default function HowITWorks() {
               <button
                 key={step.number}
                 onClick={() => setActiveStep(step.number)}
-                className={`px-4 sm:px-6 py-2 sm:py-3 rounded-lg transition-all duration-300 ${
-                  activeStep === step.number
-                    ? `bg-gradient-to-r ${step.color} text-white shadow-lg scale-105`
+                className={`px-4 sm:px-6 py-2 sm:py-3 rounded-lg transition-all duration-300 ${activeStep === step.number
+                    ? `bg-linear-to-r ${step.color} text-white shadow-lg scale-105`
                     : "bg-gray-800 text-gray-400 hover:text-white hover:bg-gray-700"
-                }`}
+                  }`}
               >
                 <span className="font-semibold text-sm sm:text-base">Step {step.number}</span>
               </button>
@@ -168,23 +167,23 @@ export default function HowITWorks() {
                 <div key={step.number} className="animate-fadeIn">
                   <div className="flex flex-col lg:flex-row items-start lg:items-center gap-6 lg:gap-8">
                     {/* Step Icon */}
-                    <div className={`bg-gradient-to-r ${step.color} w-20 h-20 sm:w-24 sm:h-24 rounded-2xl flex items-center justify-center shadow-lg`}>
+                    <div className={`bg-linear-to-r ${step.color} w-20 h-20 sm:w-24 sm:h-24 rounded-2xl flex items-center justify-center shadow-lg`}>
                       <span className="text-3xl sm:text-4xl">{step.icon}</span>
                     </div>
-                    
+
                     {/* Step Content */}
                     <div className="flex-1">
                       <div className="flex items-center mb-2">
                         <span className="text-xs sm:text-sm font-semibold text-blue-400 bg-blue-900/30 px-3 py-1 rounded-full">
                           Step {step.number}
                         </span>
-                        <div className="ml-4 h-px flex-1 bg-gradient-to-r from-gray-600 to-transparent"></div>
+                        <div className="ml-4 h-px flex-1 bg-linear-to-r from-gray-600 to-transparent"></div>
                       </div>
-                      
+
                       <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-3">
                         {step.title}
                       </h2>
-                      
+
                       <p className="text-blue-300/80 text-sm sm:text-base lg:text-lg mb-6">
                         {step.description}
                       </p>
@@ -206,37 +205,34 @@ export default function HowITWorks() {
                     <button
                       onClick={() => setActiveStep(Math.max(1, activeStep - 1))}
                       disabled={activeStep === 1}
-                      className={`flex items-center px-4 py-2 rounded-lg transition-all duration-300 ${
-                        activeStep === 1
+                      className={`flex items-center px-4 py-2 rounded-lg transition-all duration-300 ${activeStep === 1
                           ? "opacity-50 cursor-not-allowed"
                           : "text-blue-400 hover:text-blue-300 hover:bg-gray-700"
-                      }`}
+                        }`}
                     >
                       <span className="mr-2">←</span>
                       <span>Previous Step</span>
                     </button>
-                    
+
                     <div className="flex items-center space-x-2">
                       {steps.map((s) => (
                         <div
                           key={s.number}
-                          className={`w-2 h-2 rounded-full ${
-                            activeStep === s.number
-                              ? `bg-gradient-to-r ${s.color}`
+                          className={`w-2 h-2 rounded-full ${activeStep === s.number
+                              ? `bg-linear-to-r ${s.color}`
                               : "bg-gray-600"
-                          }`}
+                            }`}
                         />
                       ))}
                     </div>
-                    
+
                     <button
                       onClick={() => setActiveStep(Math.min(5, activeStep + 1))}
                       disabled={activeStep === 5}
-                      className={`flex items-center px-4 py-2 rounded-lg transition-all duration-300 ${
-                        activeStep === 5
+                      className={`flex items-center px-4 py-2 rounded-lg transition-all duration-300 ${activeStep === 5
                           ? "opacity-50 cursor-not-allowed"
                           : "text-blue-400 hover:text-blue-300 hover:bg-gray-700"
-                      }`}
+                        }`}
                     >
                       <span>Next Step</span>
                       <span className="ml-2">→</span>
@@ -253,7 +249,7 @@ export default function HowITWorks() {
           <h2 className="text-2xl sm:text-3xl font-bold text-white text-center mb-8 sm:mb-12">
             Why Choose <span className="text-blue-400">ServiceHub</span>
           </h2>
-          
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {features.map((feature, index) => (
               <div
@@ -273,11 +269,11 @@ export default function HowITWorks() {
           <h2 className="text-2xl sm:text-3xl font-bold text-white text-center mb-8 sm:mb-12">
             Complete Service <span className="text-blue-400">Timeline</span>
           </h2>
-          
+
           <div className="relative">
             {/* Timeline Line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-blue-500 via-purple-500 to-emerald-500"></div>
-            
+            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-linear-to-b from-blue-500 via-purple-500 to-emerald-500"></div>
+
             {/* Timeline Steps */}
             <div className="space-y-12">
               {steps.map((step, index) => (
@@ -287,11 +283,11 @@ export default function HowITWorks() {
                 >
                   {/* Timeline Node */}
                   <div className="absolute left-1/2 transform -translate-x-1/2 z-10">
-                    <div className={`w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gradient-to-r ${step.color} flex items-center justify-center shadow-lg`}>
+                    <div className={`w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-linear-to-r ${step.color} flex items-center justify-center shadow-lg`}>
                       <span className="text-white font-bold text-sm">{step.number}</span>
                     </div>
                   </div>
-                  
+
                   {/* Content Card */}
                   <div className={`w-5/12 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8'}`}>
                     <div className="bg-gray-800/90 backdrop-blur-sm rounded-xl p-4 sm:p-6 border border-gray-700">
@@ -311,7 +307,7 @@ export default function HowITWorks() {
           <h2 className="text-2xl sm:text-3xl font-bold text-white text-center mb-8 sm:mb-12">
             Frequently Asked <span className="text-blue-400">Questions</span>
           </h2>
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 max-w-6xl mx-auto">
             {faqs.map((faq, index) => (
               <div
@@ -332,28 +328,28 @@ export default function HowITWorks() {
         </div>
 
         {/* WhatsApp Support Section */}
-        <div className="bg-gradient-to-r from-gray-800 to-gray-900 rounded-2xl sm:rounded-3xl border border-gray-700 p-8 sm:p-10 lg:p-12 text-center">
+        <div className="bg-linear-to-r from-gray-800 to-gray-900 rounded-2xl sm:rounded-3xl border border-gray-700 p-8 sm:p-10 lg:p-12 text-center">
           <div className="max-w-3xl mx-auto">
             {/* WhatsApp Icon */}
-            <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+            <div className="w-20 h-20 bg-linear-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
               <span className="text-3xl">💬</span>
             </div>
-            
+
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4">
               Need More Details or Support?
             </h2>
-            
+
             <p className="text-blue-300/80 text-sm sm:text-base lg:text-lg mb-8 max-w-2xl mx-auto">
-              Our support team is available 24/7 on WhatsApp. Get instant answers to your questions, 
+              Our support team is available 24/7 on WhatsApp. Get instant answers to your questions,
               personalized service recommendations, and quick assistance with bookings.
             </p>
-            
+
             {/* WhatsApp Button */}
             <a
-              href={`https://wa.me/${phoneNumber}?text=${whatsappMessage}`}
+              href="https://wa.me/2349045817261"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-green-600 hover:to-emerald-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 mb-6"
+              className="inline-flex items-center justify-center bg-linear-to-r from-green-500 to-emerald-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-green-600 hover:to-emerald-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 mb-6"
             >
               <span className="text-2xl mr-3">💬</span>
               <div className="text-left">
@@ -361,7 +357,7 @@ export default function HowITWorks() {
                 <div className="text-xl">WhatsApp</div>
               </div>
             </a>
-            
+
             {/* Support Features */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mt-8">
               <div className="bg-gray-800/50 rounded-lg p-4">
@@ -369,20 +365,20 @@ export default function HowITWorks() {
                 <div className="text-white font-medium text-sm">Instant Response</div>
                 <div className="text-green-400/80 text-xs">Usually within 2 minutes</div>
               </div>
-              
+
               <div className="bg-gray-800/50 rounded-lg p-4">
                 <div className="text-green-400 text-2xl mb-2">👥</div>
                 <div className="text-white font-medium text-sm">Expert Support</div>
                 <div className="text-green-400/80 text-xs">Trained professionals</div>
               </div>
-              
+
               <div className="bg-gray-800/50 rounded-lg p-4">
                 <div className="text-green-400 text-2xl mb-2">🕒</div>
                 <div className="text-white font-medium text-sm">24/7 Availability</div>
                 <div className="text-green-400/80 text-xs">Always here to help</div>
               </div>
             </div>
-            
+
             {/* Alternative Contact */}
             <div className="mt-8 pt-8 border-t border-gray-700">
               <p className="text-blue-300/80 text-sm mb-4">
@@ -420,7 +416,7 @@ export default function HowITWorks() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/request"
-              className="bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-3 rounded-xl font-semibold hover:from-blue-700 hover:to-blue-800 transition-all duration-300 shadow hover:shadow-lg"
+              className="bg-linear-to-r from-blue-600 to-blue-700 text-white px-8 py-3 rounded-xl font-semibold hover:from-blue-700 hover:to-blue-800 transition-all duration-300 shadow hover:shadow-lg"
             >
               Request a Service Now
             </Link>

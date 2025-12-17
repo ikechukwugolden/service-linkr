@@ -24,7 +24,7 @@ export default function Pricing() {
         "Service guarantee",
         "Premium matching"
       ],
-      gradient: "from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900",
+      linear: "from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900",
       buttonStyle: "bg-gray-800 hover:bg-gray-900 dark:bg-gray-700 dark:hover:bg-gray-600",
       popular: false
     },
@@ -44,8 +44,8 @@ export default function Pricing() {
         "Discount on services (5%)"
       ],
       excludedFeatures: [],
-      gradient: "from-blue-500 to-purple-500",
-      buttonStyle: "bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700",
+      linear: "from-blue-500 to-purple-500",
+      buttonStyle: "bg-linear-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700",
       popular: true
     },
     {
@@ -66,8 +66,8 @@ export default function Pricing() {
         "Training & onboarding"
       ],
       excludedFeatures: [],
-      gradient: "from-indigo-600 to-purple-700 dark:from-indigo-700 dark:to-purple-800",
-      buttonStyle: "bg-gradient-to-r from-indigo-600 to-purple-700 hover:from-indigo-700 hover:to-purple-800",
+      linear: "from-indigo-600 to-purple-700 dark:from-indigo-700 dark:to-purple-800",
+      buttonStyle: "bg-linear-to-r from-indigo-600 to-purple-700 hover:from-indigo-700 hover:to-purple-800",
       popular: false
     }
   ];
@@ -78,7 +78,7 @@ export default function Pricing() {
       description: "One-time service booking",
       price: "Varies by service",
       features: ["Pay per service", "No subscription", "Flexible scheduling", "Service guarantee"],
-      gradient: "from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20",
+      linear: "from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20",
       icon: "🔧"
     },
     {
@@ -86,7 +86,7 @@ export default function Pricing() {
       description: "Regular home maintenance",
       price: "$49.99/month",
       features: ["Monthly check-ups", "Priority scheduling", "20% discount on repairs", "Annual safety inspection"],
-      gradient: "from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20",
+      linear: "from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20",
       icon: "📅"
     },
     {
@@ -94,7 +94,7 @@ export default function Pricing() {
       description: "24/7 emergency coverage",
       price: "$19.99/month",
       features: ["24/7 emergency line", "60-minute response guarantee", "No extra emergency fees", "Priority dispatch"],
-      gradient: "from-red-50 to-orange-50 dark:from-red-900/20 dark:to-orange-900/20",
+      linear: "from-red-50 to-orange-50 dark:from-red-900/20 dark:to-orange-900/20",
       icon: "🚨"
     }
   ];
@@ -108,23 +108,23 @@ export default function Pricing() {
 
   return (
     <div className="relative min-h-screen">
-      {/* Background Gradient Layers */}
-      <div className="fixed inset-0 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 -z-10" />
-      <div className="fixed inset-0 bg-gradient-to-tr from-transparent via-white/30 to-transparent dark:via-white/5 -z-10" />
+      {/* Background linear Layers */}
+      <div className="fixed inset-0 bg-linear-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 -z-10" />
+      <div className="fixed inset-0 bg-linear-to-tr from-transparent via-white/30 to-transparent dark:via-white/5 -z-10" />
       
-      {/* Animated Gradient Orbs */}
-      <div className="fixed top-1/4 left-1/4 w-64 h-64 sm:w-80 sm:h-80 bg-gradient-to-r from-blue-500/10 to-purple-500/10 dark:from-blue-500/5 dark:to-purple-500/5 rounded-full blur-3xl -z-5" />
-      <div className="fixed bottom-1/4 right-1/4 w-64 h-64 sm:w-80 sm:h-80 bg-gradient-to-r from-green-500/10 to-emerald-500/10 dark:from-green-500/5 dark:to-emerald-500/5 rounded-full blur-3xl -z-5" />
+      {/* Animated linear Orbs */}
+      <div className="fixed top-1/4 left-1/4 w-64 h-64 sm:w-80 sm:h-80 bg-linear-to-r from-blue-500/10 to-purple-500/10 dark:from-blue-500/5 dark:to-purple-500/5 rounded-full blur-3xl -z-5" />
+      <div className="fixed bottom-1/4 right-1/4 w-64 h-64 sm:w-80 sm:h-80 bg-linear-to-r from-green-500/10 to-emerald-500/10 dark:from-green-500/5 dark:to-emerald-500/5 rounded-full blur-3xl -z-5" />
 
       <div className="relative px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16 xl:py-20 max-w-7xl mx-auto">
         
         {/* Header Section */}
         <div className="text-center mb-8 sm:mb-12 lg:mb-16 max-w-4xl mx-auto">
-          <span className="inline-block bg-gradient-to-r from-blue-500 to-purple-500 text-white text-xs sm:text-sm font-semibold px-3 sm:px-4 py-1.5 sm:py-2 rounded-full mb-3 sm:mb-4 shadow-lg">
+          <span className="inline-block bg-linear-to-r from-blue-500 to-purple-500 text-white text-xs sm:text-sm font-semibold px-3 sm:px-4 py-1.5 sm:py-2 rounded-full mb-3 sm:mb-4 shadow-lg">
             Simple, Transparent Pricing
           </span>
           <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4">
-            Choose Your <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Perfect Plan</span>
+            Choose Your <span className="bg-linear-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Perfect Plan</span>
           </h1>
           <p className="text-gray-600 dark:text-gray-300 text-sm sm:text-base lg:text-lg max-w-3xl mx-auto">
             Flexible plans for every need. Start with Basic for free or upgrade for premium features.
@@ -139,7 +139,7 @@ export default function Pricing() {
                 onClick={() => setBillingCycle("monthly")}
                 className={`px-6 py-2 sm:px-8 sm:py-3 rounded-lg text-sm sm:text-base font-semibold transition-all duration-300 ${
                   billingCycle === "monthly"
-                    ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg"
+                    ? "bg-linear-to-r from-blue-600 to-purple-600 text-white shadow-lg"
                     : "text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
                 }`}
               >
@@ -149,12 +149,12 @@ export default function Pricing() {
                 onClick={() => setBillingCycle("annual")}
                 className={`px-6 py-2 sm:px-8 sm:py-3 rounded-lg text-sm sm:text-base font-semibold transition-all duration-300 relative ${
                   billingCycle === "annual"
-                    ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg"
+                    ? "bg-linear-to-r from-blue-600 to-purple-600 text-white shadow-lg"
                     : "text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
                 }`}
               >
                 Annual
-                <span className="absolute -top-2 -right-2 bg-gradient-to-r from-green-500 to-emerald-500 text-white text-xs px-2 py-1 rounded-full">
+                <span className="absolute -top-2 -right-2 bg-linear-to-r from-green-500 to-emerald-500 text-white text-xs px-2 py-1 rounded-full">
                   Save 20%
                 </span>
               </button>
@@ -179,7 +179,7 @@ export default function Pricing() {
               >
                 {plan.popular && (
                   <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                    <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-1.5 rounded-full text-sm font-semibold shadow-lg">
+                    <div className="bg-linear-to-r from-blue-600 to-purple-600 text-white px-4 py-1.5 rounded-full text-sm font-semibold shadow-lg">
                       Most Popular
                     </div>
                   </div>
@@ -268,7 +268,7 @@ export default function Pricing() {
         <div className="mb-12 sm:mb-16 lg:mb-20">
           <div className="text-center mb-8 sm:mb-12">
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4">
-              Service <span className="bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">Packages</span>
+              Service <span className="bg-linear-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">Packages</span>
             </h2>
             <p className="text-gray-600 dark:text-gray-300 text-sm sm:text-base max-w-2xl mx-auto">
               Special packages for specific service needs
@@ -279,7 +279,7 @@ export default function Pricing() {
             {servicePackages.map((pkg, index) => (
               <div
                 key={index}
-                className={`bg-gradient-to-br ${pkg.gradient} rounded-2xl p-6 sm:p-8 border border-gray-200 dark:border-gray-700 backdrop-blur-sm`}
+                className={`bg-linear-to-br ${pkg.linear} rounded-2xl p-6 sm:p-8 border border-gray-200 dark:border-gray-700 backdrop-blur-sm`}
               >
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 bg-white dark:bg-gray-800 rounded-xl flex items-center justify-center mr-4 shadow-lg">
@@ -326,7 +326,7 @@ export default function Pricing() {
         <div className="mb-12 sm:mb-16 lg:mb-20">
           <div className="text-center mb-8 sm:mb-12">
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4">
-              Frequently Asked <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Questions</span>
+              Frequently Asked <span className="bg-linear-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Questions</span>
             </h2>
             <p className="text-gray-600 dark:text-gray-300 text-sm sm:text-base max-w-2xl mx-auto">
               Everything you need to know about our pricing
@@ -376,7 +376,7 @@ export default function Pricing() {
         </div>
 
         {/* CTA Section */}
-        <div className="bg-gradient-to-r from-gray-900 to-gray-800 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-8 sm:p-10 lg:p-12 text-center">
+        <div className="bg-linear-to-r from-gray-900 to-gray-800 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-8 sm:p-10 lg:p-12 text-center">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4">
             Ready to Get Started?
           </h2>
@@ -386,7 +386,7 @@ export default function Pricing() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/request"
-              className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-3 rounded-xl font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300 shadow-lg hover:shadow-xl"
+              className="bg-linear-to-r from-blue-500 to-purple-500 text-white px-8 py-3 rounded-xl font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               Start Free Trial
             </Link>
