@@ -4,7 +4,7 @@ import Services from "./Pages/Service.jsx";
 import Pricing from "./Pages/Pricing.jsx"; // Add this import
 import RequestService from "./Pages/Requestservice.jsx";
 import Providerlogin from "./Pages/Providerlogin.jsx";
-import ProviderDashboard from "./pages/ProviderDashboard";
+import ProviderDashboard from "./Pages/ProviderDashboard";
 import Navbar from "./components/Navbar";
 import HowITWorks from "./Pages/HowITworks.jsx";
 import Professionals from "./Pages/Professionals.jsx";
