@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home.jsx";
 import Services from "./Pages/Service.jsx";
 import Pricing from "./Pages/Pricing.jsx"; // Add this import
-import RequestService from "./pages/RequestService";
+import RequestService from "./Pages/Requestservice.jsx";
 import ProviderLogin from "./pages/ProviderLogin";
 import ProviderDashboard from "./pages/ProviderDashboard";
 import Navbar from "./components/Navbar";
