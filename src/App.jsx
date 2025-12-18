@@ -3,7 +3,7 @@ import Home from "./Pages/Home.jsx";
 import Services from "./Pages/Service.jsx";
 import Pricing from "./Pages/Pricing.jsx"; // Add this import
 import RequestService from "./Pages/Requestservice.jsx";
-import ProviderLogin from "./pages/Providerlogin";
+import Providerlogin from "./pages/Providerlogin";
 import ProviderDashboard from "./pages/ProviderDashboard";
 import Navbar from "./components/Navbar";
 import HowITWorks from "./Pages/HowITworks.jsx";
@@ -23,7 +23,7 @@ function App() {
         <Route path="/HowITworks" element={<HowITWorks />} />
         <Route path="/pricing" element={<Pricing />} /> 
         <Route path="/request" element={<RequestService />} />
-        <Route path="/provider/login" element={<ProviderLogin />} />
+        <Route path="/provider/login" element={<Providerlogin />} />
         <Route path="/provider/dashboard" element={<ProviderDashboard />} />
       </Routes>
     </Router>
