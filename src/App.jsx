@@ -3,7 +3,7 @@ import Home from "./Pages/Home.jsx";
 import Services from "./Pages/Service.jsx";
 import Pricing from "./Pages/Pricing.jsx"; // Add this import
 import RequestService from "./Pages/Requestservice.jsx";
-import Providerlogin from "./pages/Providerlogin";
+import Providerlogin from "./Pages/Providerlogin.jsx";
 import ProviderDashboard from "./pages/ProviderDashboard";
 import Navbar from "./components/Navbar";
 import HowITWorks from "./Pages/HowITworks.jsx";
