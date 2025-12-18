@@ -26,7 +26,7 @@ export default function Login() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100 dark:bg-gray-900">
       <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-md w-full max-w-md">
-        <h2 className="text-2xl font-bold mb-6 text-gray-800 dark:text-gray-200">Sign Up</h2>
+        <h2 className="text-2xl font-bold mb-6 text-gray-800 dark:text-gray-200">Sign In</h2>
         {error && <p className="text-red-500 mb-4">{error}</p>}
 
         <form onSubmit={handleLogin}>
@@ -56,7 +56,7 @@ export default function Login() {
             type="submit"
             className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-colors"
           >
-            Sign Up
+            Log In
           </button>
         </form>
       </div>

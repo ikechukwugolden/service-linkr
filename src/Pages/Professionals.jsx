@@ -270,7 +270,7 @@ export default function Professionals() {
               Join as Professional
             </Link>
             <Link
-              to="/provider/dashboard"
+              to="/login"
               className="bg-gray-800 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-700 transition-colors border border-gray-700"
             >
               Professional Login

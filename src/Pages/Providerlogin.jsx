@@ -12,9 +12,9 @@ import {
   BarChart,
   CheckCircle,
 } from "lucide-react";
-import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../../Firebase.config";
-import { addDoc, collection } from "firebase/firestore";
+import { createUserWithEmailAndPassword, signInWithPopup } from "firebase/auth";
+import { auth, provider } from "../../Firebase.config";
+import { setDoc, doc, serverTimestamp } from "firebase/firestore";
 import { db } from "../../Firebase.config";
 import { useNavigate } from "react-router-dom";
 
@@ -79,6 +79,7 @@ export default function ProviderLogin() {
         console.error("Error registering professional:", error);
       }
     }
+    
 
     async function saveProfessionalData() {
       try {
@@ -103,6 +104,33 @@ export default function ProviderLogin() {
     setLoading(false);
   };
 
+  const signInWithGoogle = async () => {
+    // setError(null);
+    setLoading(true);
+    try {
+      const result = await signInWithPopup(auth, provider);
+      const user = result.user;
+      console.log("Google sign-in user:", user.uid);
+      navigate("/provider/dashboard");
+
+      // Create/merge professional document
+      await setDoc(doc(db, "professionals", user.uid), {
+        uid: user.uid,
+        username: user.displayName || username || "",
+        email: user.email || "",
+        contact: user.phoneNumber || contact || "",
+        location: location || "",
+        occupation: occupation || "",
+        createdAt: serverTimestamp(),
+      }, { merge: true });
+
+    } catch (err) {
+      console.error("Google sign-in error:", err);
+      // setError(err?.message || "Google sign-in failed. Please try again.");
+    } finally {
+      setLoading(false);
+    }
+  };
   return (
     <div className="min-h-screen bg-[#212b3a] flex items-center justify-center p-4 lg:p-8">
       {/* Decorative elements */}
@@ -377,11 +405,12 @@ export default function ProviderLogin() {
                       <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                         <Lock className="h-5 w-5 text-gray-500" />
                       </div>
-                      <input
+                      <input 
+                      value={password}
                         type={showPassword ? "text" : "password"}
                         placeholder="Create a secure password"
                         className="w-full pl-10 pr-12 py-3 bg-gray-800 border border-gray-700 text-white rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 outline-none placeholder-gray-500"
-                        value={password}
+                        
                         onChange={(e) => setPassword(e.target.value)}
                         required
                         disabled={loading}
@@ -440,7 +469,7 @@ export default function ProviderLogin() {
 
               {/* Google Sign In */}
               <button
-                type="button"
+                type="button" onClick={signInWithGoogle}
                 className="w-full py-3 px-4 bg-gray-800 border border-gray-700 rounded-xl hover:bg-gray-700/50 transition-colors duration-200 flex items-center justify-center gap-3"
                 disabled={loading}
               >
@@ -462,7 +491,7 @@ export default function ProviderLogin() {
                     d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
                   />
                 </svg>
-                <span className="text-gray-300 font-medium">
+                <span  className="text-gray-300 font-medium">
                   Sign up with Google
                 </span>
               </button>

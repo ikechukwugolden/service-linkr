@@ -134,7 +134,7 @@ export default function ProviderDashboard() {
             </button>
 
             {/* User Menu */}
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3 ">
               <div className="text-right hidden sm:block">
                 <p className="font-medium">{user?.email || "Business Account"}</p>
                 <p className="text-sm text-gray-400">Premium Member</p>
